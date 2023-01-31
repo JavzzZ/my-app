@@ -1,5 +1,5 @@
 import './App.css';
-import Interval from './Interval';
+import Interval from './pages/Interval';
 
 function App() {
   return (
