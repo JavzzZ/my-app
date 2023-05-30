@@ -1,13 +1,12 @@
+import Calculate from '../components/calculate/index.tsx';
 import './index.scss';
 
-const CalculateEntrance = () => {
-  // const map = [];
-
+const Index = () => {
   return (
     <div className="calculate-wrap">
-      <div className="">123</div>
+      {Calculate()}
     </div>
   );
 }
 
-export default CalculateEntrance;
+export default Index;
