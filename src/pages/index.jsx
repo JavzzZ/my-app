@@ -3,7 +3,7 @@ import './index.scss';
 
 const Index = () => {
   return (
-    <div className="calculate-wrap">
+    <div>
       {Calculate()}
     </div>
   );

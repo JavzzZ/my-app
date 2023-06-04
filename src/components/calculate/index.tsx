@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useState } from "react";
+import calculateMap from "../map";
 
-import './index.scss';
+import "./index.scss";
 
 const CalculateEntrance = () => {
-    // const map = [{
+  const [sumShow, setSumShow] = useState('0');
 
-    // }];
+  return (
+    <div className="calculate-wrap">
+      <div className="sum-show">{sumShow}</div>
 
-    return (
-        <div className="calculate-wrap">
-            <div className="">11111</div>
-        </div>
-    );
-}
+      {calculateMap.map((item) => {
+        const { name, code, type } = item || {};
+        return (
+          <div 
+          className={`calculate-content ${code === "0" ? "row2" : ""}`}
+            onClick={()=> {
+                setSumShow(code);
+            }}
+          >
+            {name}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 export default CalculateEntrance;
