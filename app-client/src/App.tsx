@@ -1,16 +1,10 @@
 import React from 'react';
 
-import './App.css';
+import Home from './pages/Home/index';
+import './App.less';
 
 function App() {
-
-  return (
-    <>
-      <div>
-        这里是变化的内容
-      </div>
-    </>
-  )
+  return <Home />
 }
 
-export default App
+export default App;

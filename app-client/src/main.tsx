@@ -5,14 +5,28 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import ErrorPage from './pages/ErrorPage/index.tsx';
-import App from './App.tsx'
-import './index.css'
+import App from './App.tsx';
+import About from './pages/About';
+import System from './pages/System';
+import ErrorPage from './pages/ErrorPage';
+import './index.css';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "System",
+        element: <System />,
+        errorElement: <ErrorPage />,
+      },
+    ],
+  },
+  {
+    path: "/About",
+    element: <About />,
     errorElement: <ErrorPage />,
   },
 ]);
