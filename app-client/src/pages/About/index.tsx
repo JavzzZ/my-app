@@ -1,12 +1,12 @@
 import React from "react";
-import { Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <>
       <div>关于我们</div>
       <div>关于我们的内容部分</div>
-      <Button href='/'>返回首页</Button>
+      <Link to='/'>返回首页</Link>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import './index.less';
 
@@ -22,12 +22,13 @@ function Home() {
           navigationMap.map((item, index) => {
             return (
               <li key={index} >
-                <a href={`/${item.code}`}>{item.name}</a>
+                <Link to={`/${item.code}`}>{item.name}</Link>
               </li>
             )
           })
         }
       </ul >
+
       <Outlet />
     </>
   )

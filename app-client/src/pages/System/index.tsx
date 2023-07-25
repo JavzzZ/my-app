@@ -1,11 +1,11 @@
 import React from "react";
-import { Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 const System = () => {
   return (
     <>
       <div>系统中心</div>
-      <Button href='/'>返回首页</Button>
+      <Link to='/'>返回首页</Link>
     </>
   );
 };
